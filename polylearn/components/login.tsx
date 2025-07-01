@@ -1,0 +1,56 @@
+'use client'
+
+import {
+    Card, 
+    CardHeader,
+    CardContent
+} from "@/components/ui/card"
+
+
+
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+
+export default function Login() {
+    return (
+        <>
+            <Card>
+                <CardHeader>
+                    <div className="flex justify-center flex-col">
+                        <h2 className="text-2xl font-bold">Welcome Back</h2>
+                        <p className="text-sm text-muted-foreground">Login to your PolyLearn account</p>
+                    </div>
+                </CardHeader>
+                <CardContent>
+                    <form action="">
+                        <div>
+                            <label htmlFor="email" className="block text-sm">Email</label>
+                            <Input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Enter your email" 
+                                className="mt-1"
+                                required
+                            />
+                        </div>
+                        <div className="mt-4">
+                            <label htmlFor="password" className="block text-sm">Password</label>
+                            <Input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Enter your password" 
+                                className="mt-1"
+                                required
+                            />
+                        </div>
+                        <div className="mt-6">
+                            <Button type="submit" className="w-full">Login</Button>
+                        </div>
+                    </form>
+                </CardContent>
+            </Card>
+        </>
+    )
+}
