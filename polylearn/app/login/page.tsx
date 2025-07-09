@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/tabs"
 
 import Login from "@/components/login"
+import Register from "@/components/register"
 
 export default function Page() {
     return (
@@ -20,7 +21,7 @@ export default function Page() {
                     <Login />
                 </TabsContent>
                 <TabsContent value="register">
-                    {/* Register Form Component */}
+                    <Register />
                 </TabsContent>
             </Tabs>
         </div>

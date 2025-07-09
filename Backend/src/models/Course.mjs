@@ -6,6 +6,10 @@ const courseSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    name: {
+        type: String,
+        required: true,
+    },
     description: {
         type: String,
         required: true
@@ -16,7 +20,7 @@ const courseSchema = new mongoose.Schema({
         required: true
     },
     students: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'User'
     }],
     status: {

@@ -21,12 +21,12 @@ import {
 import {Button} from '@/components/ui/button'
 import { Separator } from "@/components/ui/separator";
 
-export interface DraftedCourse {
+export interface CourseDetails {
     name: string;
     instructor: string;
+    title: string;
 }
-
-export default function PublishCourse(props: { courses: DraftedCourse[] }) {
+export default function Enrollment(props: { courses: CourseDetails[] }) {
     return (
         <div className='shadow p-4 rounded-md bg-white'>
             <div className="mb-4">
@@ -38,7 +38,7 @@ export default function PublishCourse(props: { courses: DraftedCourse[] }) {
                         {
                             props.courses.map((course, index) => (
                                 <SelectItem key={index} value={course.name}>
-                                    {course.name} - {course.instructor}
+                                    {course.name}
                                 </SelectItem>
                             ))
                         }
@@ -82,14 +82,14 @@ export default function PublishCourse(props: { courses: DraftedCourse[] }) {
                 <div className=" flex justify-end">
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
-                            <Button>Publish Course</Button>
+                            <Button>Enroll</Button>
                         </AlertDialogTrigger>
                         <AlertDialogContent>
                             <AlertDialogTitle>
-                                Confirm Course Publication
+                                Confirm Course Enrollment
                             </AlertDialogTitle>
                             <AlertDialogDescription>
-                                Are you sure you want to publish this course? This action cannot be undone.
+                                Are you sure you want to publish this course?
                             </AlertDialogDescription>
                             <AlertDialogFooter>
                                 <AlertDialogCancel className="hover:bg-red-300/50">Cancel</AlertDialogCancel>

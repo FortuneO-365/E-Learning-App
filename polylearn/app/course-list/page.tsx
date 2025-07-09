@@ -66,7 +66,7 @@ import {
         id: "11",
         name: "Mobile App Development",
         status: "published",
-      },
+      }
       // ...
     ]
   }

@@ -79,7 +79,7 @@ const data = {
         },
         {
           title: "Course Enrollment",
-          url: "#",
+          url: "/enroll",
         },
       ],
     },
@@ -121,7 +121,7 @@ const data = {
   projects: [
     {
       name: "Design Engineering",
-      url: "#",
+      url: "/courses",
       icon: Frame,
     },
     {
